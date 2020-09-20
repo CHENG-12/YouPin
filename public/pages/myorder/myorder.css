@@ -1,0 +1,354 @@
+.big-wra{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.big-wra .top{
+	display: flex;
+	height: 45px;
+	flex-shrink: 0;
+	padding-right: 45px;
+}
+.top i.back{
+	width: 45px;
+	flex-shrink: 0;
+	background-image: url(/images/back.png);
+	bacground-position: 0 0 ;
+	background-size: 100%;
+}
+.top i.back img{
+	height:30px;
+}
+.top span{
+	flex-grow: 1;
+	color:#000;
+	font-size: 14px;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nav{
+	height: 44px;
+	flex-shrink:0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.nav li{
+	line-height: 16px;
+	border-radius: 8px;
+	color: #666;
+	font-size: 13px;
+	
+}
+.nav li.active span:nth-child(1){
+	border-radius: 13px;
+	color: #fff;
+	background:linear-gradient(to right, rgb(240, 206, 123), rgb(221, 177, 81));
+}
+.nav li  span:nth-child(1){
+	display: inline-block;
+	height: 22px;
+	line-height: 22px;
+	color: #666;
+	font-size: 13px;
+	padding: 0 10px;
+	
+}
+/* 待付款个数的显示 */
+.nav li.unpay{
+	position: relative;
+}
+.nav li.unpay span.num{
+	color: #fff;
+	position: absolute;
+	left: 51px;
+	top: -11px;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	line-height: 16px;
+	border-radius: 8px;
+	background-color: #e30d0d;
+	display: none;
+}
+.nav li.unpay span.num.show{
+	display: block;
+}
+
+/* 内容区域 */
+.content{
+	padding:0 10px;
+	flex-grow: 1;
+	overflow: auto;
+	background-color: #eee;
+}
+.content unpay{
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+/* 无购物商品的提示 */	
+.cart-empty{
+	text-align: center;
+	display: none;
+	background-color: #eee;
+	padding: 40px 0;
+}
+.cart-empty.active{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.cart-empty .img-wra img{
+	width: 90px;
+}
+.cart-empty p.notice{
+	color: #666;
+	font-size: 13px;
+	margin: 14px 0;
+	
+}
+.cart-empty p.goto a{
+	color: #666;
+	font-size: 13px;
+	line-height: 34px;
+	padding: 7px 17px;
+	border: 1px solid #BCBCBC;
+	border-radius: 17px;
+}
+/* 为你推荐区域 */
+.content payed{
+	background-color: #fff;
+}
+/* 列表样式 */
+.proList li{
+/* 	border-top-left-radius: 15px;
+	border-top-right-radius: 15px; */
+	
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	background-color: #fff;
+	/* margin-top: 10px; */
+}
+.wait-pay{
+	text-align: right;
+}
+.proList {
+	margin-top: 10px;
+}
+.proList li span.img-wra{
+	margin-right: 5px;
+	flex-shrink: 0;
+}
+.proList li span.img-wra img{
+	height: 86px;
+	background-color: #eee;
+}
+.wra{
+	display: flex;
+}
+.proList li span.pro-info{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.proList li span.pro-info .name{
+	font-size: 14px;
+	color:rgb(51, 51, 51);
+}
+span.pro-info .price-num{
+	display: flex;
+	justify-content: space-between;
+}
+span.pro-info .price-num .price{
+	font-size:15px;
+	color: rgb(191, 17, 17);
+	font-weight: bold;
+
+}
+span.pro-info .price-num .num{
+	font-weight: bold;
+}
+span.pro-info .send-free{
+	font-size: 12px;
+	color:rgb(191, 17, 17);
+
+}
+/* 小米自营那一行的样式 */
+ul.proList li .wait-pay {
+	display: flex;
+	padding: 0 10px;
+	align-items: center;
+	margin-bottom: 15px;
+}
+ul.proList li .wait-pay i {
+	flex-shrink: 0;
+	width: 25px;
+	height: 25px;
+	background-image: url(../cart/logo_xiaomi.png);
+	background-size: 100%;
+	background-position: 0 0;
+}
+ul.proList li .wait-pay span.mid{
+	flex-grow: 1;
+	text-align: left;
+	font-weight: bold;
+	color: #333;
+	font-size: 15px;
+	margin-left: 10px;
+}
+ul.proList li .wait-pay span.right{
+	flex-shrink: 0;
+	color: #BF1111;
+	font-size: 14px;
+}
+
+/* 下方总计内容 */
+.total{
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px;
+	background-color: #fff;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	padding-bottom: 10px;
+}
+.total .money{
+	text-align: right;
+	flex-grow: 1;
+	color: #333;
+	font-size: 12px;
+	vertical-align: bottom;
+}
+.total .money>span:nth-child(1){
+	margin-right: 10px;
+}
+.total .money>span:nth-child(2){
+	
+}
+.total .money>span:nth-child(2) span{
+	font-size: 16px;
+}
+.total .delete{
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.total .delete>span:nth-child(1){
+	color: #999;
+	font-size: 14px;
+}
+.total .delete>span:nth-child(2){
+	color: #BF1111;
+	font-size: 14px;
+	width: 76px;
+	line-height: 28px;
+	border: 1px solid #BF1111;
+	border-radius: 14px;
+	text-align: center;
+}
+/* 支付二维码蒙层 */
+.pay-mark{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	height:100%;
+	width:100%;
+	padding-top: 150px;
+	display: none;
+	background-color: rgba(0,0,0,.3);
+}
+.pay-mark.show{
+	display: block;
+}
+.payMark-wra{
+	margin-top: 200px;
+	padding-top: 25px;
+	width: 100%;
+	height:450px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.payMark-wra .contain-wra{
+	/* width: 400px; */
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+	
+}
+.payMark-wra .contain-wra .erCode{
+	/* width: 300px; */
+	border-top: 1px solid #ccc;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.payMark-wra .contain-wra img{
+	vertical-align: bottom;
+	width: 350px;
+}
+.payMark-wra .contain-wra p{
+	height: 50px;
+	line-height: 60px;
+	text-align: center;
+	color: #333;
+	font-size: 16px;
+	
+}
+.payMark-wra .contain-wra p span{
+	color: #FF6900;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.payMark-wra .contain-wra input{
+	margin-top: 30px;
+	width: 60px;
+	height: 25px;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	border-color: #254e46;
+	color: #fff;
+	background-color: #BF1111;
+}
+
+.payMark-wra .contain-wra input.btn-ok{
+	margin-left: 69px;
+}
+	
+.payMark-wra .contain-wra input.btn-cancel{
+	margin-left: 156px;
+	
+}
+.payMark-wra .contain-wra .icn{
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	top: -14px;
+	left: calc(100% - 32px);
+	cursor:pointer;
+	background-image: url(../images/order-confirm/叉号.png);
+	background-position: 0px 161px;
+	background-color: #BF1111;
+}
+
+/* 未支付区域的样式 */
+.content div.part{
+	display: none;
+}
+.content div.part.active{
+	display: block;
+}

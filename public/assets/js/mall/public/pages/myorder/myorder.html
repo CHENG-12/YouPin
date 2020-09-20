@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="/assets/css/reset.css" />
+		<link rel="stylesheet" href="/assets/css/public.css" />
+		<link rel="stylesheet" href="myorder.css">
+	</head>
+	<body>
+		<div class="big-wra">
+			<div class="top">
+				<i class="back"></i>
+				<span>我的订单</span>
+			</div>
+			<ul class="nav">
+				<li class="active"><span>全部</span></li>
+				<li class="unpay"><span class="wait-pay" >待付款</span><span class="num">1</span></li>
+				<li><span>待收货</span></li>
+				<li><span>退款订单</span></li>
+				<li><span>已收货</span></li>
+			</ul>
+			<div class="content hide-scroll">
+				<div class="all part active"></div>
+				<div class="unpay part">
+					
+					待付款页面
+				</div>
+				<!-- <div class="cart-empty active">
+					<div class="img-wra"><img src="/images/cart/no_result_cart.png" alt=""></div>
+					<p class="notice">您的购物车中暂无<span>待付款</span>的订单!</p>
+					<p class="goto"><a href="/pages/index/index.html">去逛逛~</a></p>
+				</div> -->
+				<div class="unreceive part">待收货页面</div>
+				<div class="refound part">
+					<div class="cart-empty active">
+						<div class="img-wra"><img src="/images/cart/no_result_cart.png" alt=""></div>
+						<p class="notice">您的购物车中暂无<span>退款</span>的订单!</p>
+						<p class="goto"><a href="/pages/index/index.html">去逛逛~</a></p>
+					</div>
+				</div>
+				<div class="received part">
+					<div class="cart-empty active">
+						<div class="img-wra"><img src="/images/cart/no_result_cart.png" alt=""></div>
+						<p class="notice">您的购物车中暂无<span>已收货</span>的订单!</p>
+						<p class="goto"><a href="/pages/index/index.html">去逛逛~</a></p>
+					</div>
+					
+				</div>
+				<!-- 	<ul class="order proList">
+						<li>
+							<div class="wait-pay">
+								<i></i>
+								<span class="mid">小米自营</span>
+								<span class="right">待付款</span>
+							</div>
+							<div class="wra">
+								<span class="img-wra"><img src="/images/category/35.png" alt=""></span>
+								<span class="pro-info">
+									<span class="name">小米电视4A 70英寸 黑色 70英寸</span>
+									<span class="price-num">
+										<span class="price">78</span>
+										<span class="num">*6</span>
+									</span>
+									<span class="send-free">99元包邮</span>
+								</span>
+							</div>
+						<div class="total">
+							<span class="money">
+								<span >总计:<span></span>件</span>
+								<span>总金额:<span></span>元</span>
+							</span>
+							<span class="delete">
+								<span>删除订单</span>
+								<span>再次购买</span>
+							</span>
+						</div>
+						</li> 
+					</ul> -->
+			</div>
+			
+			<!-- 支付二维码蒙层 -->
+			<div class="pay-mark">
+				<div class="payMark-wra">
+					<div class="contain-wra">
+						<div class="icn">×</div>
+						<p>请支付金额￥<span class="amount"></span>元</p>
+						<div class="erCode">
+							<img src="/pages/pay/ercode.jpg" alt="">
+						</div>
+						<input type="button" value="确定" class="btn-ok">
+						<input type="button" value="取消" class="btn-cancel">
+					</div>
+					
+				</div>			
+				
+			</div>
+			
+			
+		</div>
+		
+		
+		<script src="/assets/js/js-cookie.js"></script>
+		<script src="/assets/js/jQuery-1.8.2.js"></script>
+		<script src="/assets/js/jQuery-extend.js"></script>
+		<script src="myorder.js"></script>
+	</body>
+</html>

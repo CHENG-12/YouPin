@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新增地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="/assets/css/reset.css" />
+		<link rel="stylesheet" href="/assets/css/public.css" />
+		<link rel="stylesheet" href="/assets/css/regions_picker_m.css">
+		<link rel="stylesheet" href="adAddress.css">
+	</head>
+	<body>
+		<div class="big-wra">
+			<div class="top">
+				<i><a href="/pages/address/address.html"><img src="/images/back.png" alt=""></a></i>
+				<span></span>
+			</div>
+			<div class="container">
+				<div class="input-wra">
+					<span>收货人姓名</span>
+					<input class="name" type="text" value="" placeholder="请输入收货人姓名">
+				</div>
+				<div class="input-wra">
+					<span>手机号码</span>
+					<input class="phone" type="text" value="" placeholder="请输入手机号码">
+				</div>
+				<div class="input-wra">
+					<span>所在地区</span>
+					<input class='regions-picker' type="text">
+				</div>
+				<div class="input-wra">
+					<span>街道地区</span>
+					<input class="street" type="text" value="" placeholder="请输入详细街道">
+				</div>
+				
+				<div class="btn-delete">
+					<!-- <i class="uncheck"></i> -->
+					<span>删除该地址</span>
+				</div>
+				<!-- 保存按钮 -->
+				<div class="save">
+					<input class="btn-save"  type="button" value="保存">
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		
+		
+		<script src="/assets/js/public.js"></script>
+		<script src="/assets/js/js-cookie.js"></script>
+		<script src="/assets/js/jQuery-1.8.2.js"></script>
+		<script src="/assets/js/regions.js"></script>
+		<script src="/assets/js/regions_picker_m.js"></script>
+		<script src="/assets/js/jQuery-extend.js"></script>
+		<script src="adAddress.js"></script>
+	</body>
+</html>

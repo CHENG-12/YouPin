@@ -1,0 +1,100 @@
+.big-wra{
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+/* 最上面区域 */
+.top{
+	display: flex;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	flex-shrink: 0;
+	background-color:#fff;
+	color: rgb(51, 51, 51);
+	font-size: 16px;
+	box-sizing: border-box;
+	padding-right: 45px;
+	margin-bottom: 1px;
+	border-bottom: 1px solid #ccc;
+}
+.top i{
+	
+	/* height: 15px; */
+}
+.top i img{
+	height: 48px;
+	flex-shrink: 0;
+}
+.top span{
+	flex-grow:1;
+}
+
+/* 内容区域 */
+.container{
+	overflow: auto;
+	flex-grow: 1;
+	background-color: #eee;
+}
+.container .input-wra{
+	display: flex;
+	color: #333;
+	font-size: 13px;
+	padding: 0 20px;
+	height: 52px;
+	line-height: 52px;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+}
+	
+.container .input-wra span{
+	width: 80px;
+	flex-shrink: 0;
+}
+.container .input-wra input{
+	padding-left: 15px;
+	flex-grow: 1;
+}
+.container .btn-delete{
+	margin-top: 8px;
+	display: none;
+	align-items: center;
+	color: #BF1111;
+	font-size: 13px;
+	padding: 0 20px;
+	height: 52px;
+	line-height: 52px;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+} 
+.container .btn-delete.show{
+	display: flex;
+}
+.container .default i{
+	margin-right: 10px;
+	height: 18px;
+	width: 18px;
+	background-size: 100%;
+	background-position: 0 0;
+}
+.container .default i.uncheck{
+	background-image: url(../../images/cart/icon_checkbox_uncheck.png);
+}
+.container .default i.check{
+	background-image: url(../../images/cart/icon_checkbox_check.png);
+}
+/* 保存 */
+.save{
+	line-height: 36px;
+	width: 80px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #825e3f;
+	border-radius: 5px;
+	margin-top: 30px;
+	color: #fff;
+}
+.save input{
+	color: #fff;
+}

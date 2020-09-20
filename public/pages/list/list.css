@@ -1,0 +1,203 @@
+.page-container{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	flex-direction: column;
+	background-color: #eee;
+}
+/* 火箭返回顶部 */
+i.rocket{
+	position: fixed;
+	bottom: 50px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+	z-index: 888;
+	color: #fff;
+	display: none;
+	background-color: rgba(0,0,0,.5);
+}
+
+/* 顶部 */
+.page-header{
+	flex-shrink: 0;
+} /* flexshrink 0  不被占任何便宜 */
+.page-header-top{
+	height: 45px;
+	display: flex;
+	align-items: center;
+	
+}.page-header-top>*{
+	flex-grow: 1;
+	margin-left: 10px;
+}
+.page-header-top>input{
+	background-color: white;
+	border-radius: 10px;
+	height: 32px;
+	width: 258px;
+	
+}
+.page-header-top>a{font-size: 28px;}
+.page-header-top>i{font-size: 24px;}
+.page-header-order{
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.page-header-order>i{
+	font-size: 18px;
+}
+.page-header-order>*{
+	font-size: 14px;
+	color: #333333;
+	/* flex-grow: 1;
+	flex-basis: 0; */
+}
+.page-header-order>span.active{
+	color: #bf1111;
+	font-weight: 600;
+}
+/* 内容 */
+.page-content{
+	flex-grow: 1;
+	background-color: #fff;
+	/* overflow: auto; */
+	overflow: hidden;  /* iscroll插件要求的 */
+	touch-action: pan-y;
+}
+.page-content p.info{
+	height: 50px;
+	line-height: 50px;
+	margin-top: 20px;
+	text-align: center;
+	color: #333;
+	background-color: #eee;
+}
+
+/* 商品列表样式 */
+/* 卡片式的样式 */
+ul.product-list.cart{
+ display: flex;
+ flex-wrap: wrap;
+ background-color: #EEEEEE;
+ padding: 5px;
+}
+ul.product-list.cart li{
+	width: 50%;
+	box-sizing: border-box;
+	padding: 2px;
+	
+}
+ul.product-list.cart li a{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+/* 	align-items: center;
+	text-align: center; */
+	background-color: #fff;
+}
+ul.product-list.cart li .imag{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+ul.product-list.cart li .imag img{
+	width: 138px;
+	height: 138px;
+}
+ul.product-list.cart li h4{
+	flex-grow: 1;
+	font-size: 15px;
+	color: #333;
+	padding: 0px 6px;
+	font-weight: 400;
+	
+}
+ul.product-list.cart li p{
+	padding: 0px 6px;
+	line-height: 20px;
+}
+ul.product-list.cart li p.brief{
+	font-size: 12px;
+	color: #999;
+	width: 100%;
+}
+ul.product-list.cart li p.price{
+	font-size: 17px;
+	color: #BF1111;
+}
+ul.product-list.cart li .sale-price{
+	display: flex;
+	
+}
+ul.product-list.cart li p.rate,
+ul.product-list.cart li p.sale{
+	font-size: 12px;
+	color: #999;
+}
+/* 列表式的样式 */
+ul.product-list.list{
+	overflow: auto;
+}
+ul.product-list.list li{
+	box-sizing: border-box;
+	margin-top: 10px;
+	padding: 10px;
+}
+ul.product-list.list li a{
+	display: flex;
+	width: 100%;
+
+}
+ul.product-list.list li .imag{
+	width: 126px;
+	height: 126px;
+	background-color: rgba(0,0,0,0.02);
+}
+
+
+ul.product-list.list li .imag img{
+	width: 100%;
+}
+ul.product-list.list li .content {
+	display: flex;
+	flex-direction: column;
+	width: 209px;
+	/* justify-content: space-between; */
+	margin-left: 5px;
+}
+ul.product-list.list li .content h4{
+	font-size: 15px;
+	color: #333;
+}
+ul.product-list.list li .content p.brief{
+	font-size: 13px;
+	color: #999;
+}
+ul.product-list.list li .content p.price{
+	font-size: 17px;
+	color: #BF1111;
+	line-height: 40px;
+}
+ul.product-list.list li .content span.sale-price{
+	display: flex;
+	font-size: 17px;
+	color: #BF1111;
+	margin-top: 0px;
+}
+ul.product-list.list li .content p.rate{
+	font-size: 12px;
+	color: #999;
+}
+ul.product-list.list li .content p.sale{
+	margin-left: 15px;
+	font-size: 12px;
+	color: #999;
+}

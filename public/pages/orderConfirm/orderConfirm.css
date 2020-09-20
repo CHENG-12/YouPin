@@ -1,0 +1,269 @@
+body{
+	height: 100%;
+}
+.big-wra{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+/* 头部导航区域 */
+.head-wra{
+	
+}
+.head{
+	display: flex;
+	justify-content: space-between;
+	height: 88px;
+}
+.head span{
+	display: flex;
+	align-items: center;
+}
+.head  span.icn i{
+	width: 42px;
+	background-position;
+}
+.head  span.icn i img{
+	width: 100%;
+}
+.head span.car{
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+}
+.head span.edit{
+	color: #fff;
+	font-size: 14px;
+	box-sizing: border-box;
+	padding-right: 19px;
+}
+/* 购物列表展示区域 */
+.container{
+	flex-grow: 1;
+	overflow: auto;
+	background-color: #eee;
+	
+}
+.container-inner{
+	background-image: url(../../images/login/bg_page_header.png);
+	background-repeat: no-repeat;
+	background-color: #eee;
+	background-size: 100%;
+	
+}
+.content{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	padding-bottom:10px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	background-color: #eee;
+}
+.address-empty{
+	display: none;
+}
+.address-empty.show,
+.content-head.show{
+	display: flex;
+}
+.content-head{
+	display: flex;
+	/* flex-direction:column; */
+	height: 82px;
+	padding: 0 10px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom: 1px solid #eee;
+	
+}
+.content-head .addre-info{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.content-head .addre-info .self-sale{
+	color: #333;
+	font-size: 16px;
+	font-weight: bold;
+}
+.addre-info .self-sale .name{
+	margin-right: 15px;
+}
+.addre-info .self-sale .phone{
+	
+}
+.content-head .addre-info .free{
+	margin-top: 8px;
+	color:#333;
+	font-size: 12px;
+}
+.content-head span.icn{
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+}
+.content-head span.icn i{
+	
+}
+.content-head span.icn i img{
+	height:13px;
+}
+.proList{
+	background-color: #fff;
+	
+}
+.proList .pro-head{
+	
+	font-weight: bold;
+	color:rgb(51,51,51);
+	font-size: 14px;
+	line-height: 42px;
+	padding-left: 35px;
+	background-image: url(/images/address/logo_xiaomi.png);
+	background-position: 5px center;
+	background-repeat:no-repeat;
+	background-size: 24px;
+}
+.proList li{
+	display: flex;
+	padding: 10px;
+}
+.proList li span.img-wra{
+	margin-right: 5px;
+	flex-shrink: 0;
+}
+.proList li span.img-wra img{
+	height: 86px;
+	background-color: #eee;
+}
+.proList li span.pro-info{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.proList li span.pro-info .name{
+	font-size: 14px;
+	color:rgb(51, 51, 51);
+}
+span.pro-info .price-num{
+	display: flex;
+	justify-content: space-between;
+}
+span.pro-info .price-num .price{
+	font-size:15px;
+	color: rgb(191, 17, 17);
+	font-weight: bold;
+
+}
+span.pro-info .price-num .num{
+	font-weight: bold;
+}
+span.pro-info .send-free{
+	font-size: 12px;
+	color:rgb(191, 17, 17);
+
+}
+/* 下方固定展示信息 */
+.info-one{
+	color: #333;
+	font-size: 14px;
+	height: 84px;
+	background-color: #fff;
+	padding: 10px 10px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom:10px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.info-one .info-top{
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.info-one .info-top .top-left{
+	flex-shrink: 0;
+}
+.info-one .info-top .top-right{
+	flex-grow: 1;
+	text-align: right;
+}
+.info-one .info-top i{
+	flex-shrink: 0;
+}
+.info-one .info-top i img{
+	height: 15px;
+	vertical-align: bottom;
+}
+.info-one .info-bottom{
+	flex-grow: 1;
+	display: flex;	
+	align-items:center;
+}
+.info-one .info-bottom .top-left{
+	flex-shrink: 0;
+}
+.info-one .info-bottom .top-right{
+	flex-grow: 1;
+	padding-left: 10px;
+}
+.info-two,
+.info-three{
+	border-radius: 15px;
+	padding-bottom: 10px;
+}
+.info-three .info-top .top-right{
+	color: #BF1111;
+}
+
+
+/* 脚部区域的css */
+.footer{
+	box-sizing: border-box;
+	padding: 0 10px;
+	height: 54px;
+	background-color: #fff;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.footer>*{
+	padding: 0 3px;
+}
+.footer .left{
+	flex-grow: 1;
+}
+.footer span.total{
+	color: rgb(0,0,0,0.9);
+	font-weight: bold;
+	font-size: 13px;
+}
+.footer span.price{
+	color: #BF1111;
+	font-size: 22px;
+	font-weight: bold;
+}
+.footer span.access{
+	flex-shrink: 0;
+	width:  96px;
+	line-height: 38px;
+	text-align: center;
+	color: #fff;
+	font-size:15px;
+	background: linear-gradient(to right, rgb(240, 78, 46), rgb(213, 16, 16));
+	border-radius: 15px;
+}
+.footer span.access a{
+	display: inline-block;
+}

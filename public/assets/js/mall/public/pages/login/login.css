@@ -1,0 +1,138 @@
+
+.outWra{
+	overflow: hidden;
+	height: 100%;
+	background-image: url(../../images/login/login-bj.png);
+	background-position: center;
+	background-size: 100% ;
+	
+}
+/* 标题区域 */
+h3{
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 60px;
+	line-height: 122px;
+	font-size: 16px;
+	color: #333;
+	font-style: normal;
+	font-weight:400;
+	text-align: center;
+	
+}
+/* 登录输入区域 */
+.login{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.login .login-code,
+.login .login-user{
+	color: #ccc;
+	font-size: 16px;
+	display: none;
+}
+.login .login-user.show,
+.login .login-code.show{
+	display: block;
+}
+.login input{
+	display: block;
+	width: 260px;
+	line-height: 30px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+}
+.login input::placeholder{
+	color: #999;
+}
+.gray{
+	color: gray;
+}
+/* 登录按钮 */
+.login-btn{
+	overflow: hidden;
+	margin-top: 20px;
+}
+.login-btn span{
+	display: block;
+	width: 283px;
+	margin: 0 auto;
+	line-height: 47px;
+	text-align: center;
+	border-radius: 24px;
+	font-size:14px;
+	color: #fff;
+	background:  linear-gradient(to right, #E4BB7E, #D1A96E );
+}
+.go-to-regis,
+.go-to-login{
+	display: block;
+	line-height: 40px;
+	color: #999;
+	font-size: 12px;
+	margin-left: 210px;
+	display: none;
+}
+.go-to-login a{
+	color: #999;
+}
+.go-to-login.show,
+.go-to-regis.show{
+	display: block;
+}
+
+/* 登录方式的选项卡 */
+.login-style span{
+	margin-left: 50px;
+	line-height: 20px;
+	text-align: left;
+	font-size: 12px;
+	padding-left: 5px;
+	color: #666;
+	font-weight: bold;
+	display: block;
+}
+/* .login-style .pho-user.show,
+.login-style .pho-code.show{
+	display: block;
+} */
+/* 其他登录方式 */
+.other-method{
+	margin-top: 40px;
+	color: #666;
+	font-size: 12px;
+	position: relative;
+}
+.other-method span{
+	position: absolute;
+	left: 145px;
+	top: -13px;
+	background-color: #fff;
+	padding: 5px;
+}
+.other-method .imge{
+	width: 200px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+hr{
+	width: 280px;
+	background-color: #eee;
+	margin: 0 auto;
+}
+ul.other{
+	margin-top: 50px;
+	display: flex;
+	padding: 0 60px;
+	justify-content: center;
+}
+ul.other li{
+	color: #ccc;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+}

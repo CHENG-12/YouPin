@@ -1,0 +1,193 @@
+.big-wra{
+	display: flex;
+	flex-direction: column;
+	background-color: #eee;
+	height: 100%;
+}
+.big-wra .top{
+	font-size: 16px;
+	color: #666;
+	flex-shrink: 0;
+	display: flex;
+	padding-right: 45px;
+	/* background-color: #fff; */
+}
+.big-wra .top i{
+	flex-shrink: 0;
+}
+.big-wra .top i img{
+	width: 45px;
+}
+.big-wra .top span{
+	line-height: 45px;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.big-wra .pay-money{
+	height:75px;
+	margin-top: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-shrink: 0;
+}
+.big-wra .pay-money .num{
+	line-height: 35px;
+	font-size: 28px;
+	color: #d71d1d;
+}
+.big-wra .pay-money .time{
+	font-size: 12px;
+	color: #d71d1d;
+}
+.big-wra .pay-style{
+	flex-grow: 1;
+}
+.big-wra .pay-style .pay{
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	height:60px;
+	background-color: #fff;
+	
+}
+.big-wra .pay-style i{
+	flex-shrink: 0;
+	
+}
+.big-wra .pay-style i img{
+	width: 30px;
+	vertical-align: bottom;
+}
+.big-wra .pay-style .pay span{
+	flex-grow: 1;
+	font-size: 14px;
+	color: #333;
+	display: flex;
+	align-items:center;
+	margin-left: 10px;
+}
+.big-wra .pay-style .pay i.status{
+	flex-shrink: 0;
+	width: 16px;
+	height: 16px;
+	background-position: 0 0;
+	background-size: 100%;
+	background-image: url(/images/pay/icon_checkbox_uncheck_darkgray.png);
+}
+.big-wra .pay-style .pay i.check{
+	background-image: url(/images/pay/icon_checkbox_check_brown.png);
+}
+
+.big-wra .pay-style .chat{
+	
+}
+.big-wra .footer{
+	padding: 8px 0;
+	flex-shrink: 0;
+	line-height: 54px;
+	background-color: #fff;
+	display: flex;
+	align-item: center;
+	justify-content: center;
+}
+.big-wra .footer>span{
+	width: 345px;
+	color:#fff;
+	font-size: 15px;
+	background: linear-gradient(to right, rgb(241, 83, 56), rgb(223, 20, 15));
+	border-radius: 23px;
+	text-align: center;
+}
+/* 支付二维码蒙层 */
+.pay-mark{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	height:100%;
+	width:100%;
+	padding-top: 150px;
+	display: none;
+	background-color: rgba(0,0,0,.3);
+}
+.pay-mark.show{
+	display: block;
+}
+.payMark-wra{
+	margin-top: 200px;
+	padding-top: 25px;
+	width: 100%;
+	height:450px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.payMark-wra .contain-wra{
+	/* width: 400px; */
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+	
+}
+.payMark-wra .contain-wra .erCode{
+	/* width: 300px; */
+	border-top: 1px solid #ccc;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.payMark-wra .contain-wra img{
+	vertical-align: bottom;
+	width: 350px;
+}
+.payMark-wra .contain-wra p{
+	height: 50px;
+	line-height: 60px;
+	text-align: center;
+	color: #333;
+	font-size: 16px;
+	
+}
+.payMark-wra .contain-wra p span{
+	color: #FF6900;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.payMark-wra .contain-wra input{
+	margin-top: 30px;
+	width: 60px;
+	height: 25px;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	border-color: #254e46;
+	color: #fff;
+	background-color: #BF1111;
+}
+
+.payMark-wra .contain-wra input.btn-ok{
+	margin-left: 69px;
+}
+	
+.payMark-wra .contain-wra input.btn-cancel{
+	margin-left: 156px;
+	
+}
+.payMark-wra .contain-wra .icn{
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	top: -14px;
+	left: calc(100% - 32px);
+	cursor:pointer;
+	background-image: url(../images/order-confirm/叉号.png);
+	background-position: 0px 161px;
+	background-color: #BF1111;
+}

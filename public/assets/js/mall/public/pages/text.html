@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Iscroll学习</title>
+		<style>
+			.scroll{
+				width:400px;
+				height: 800px;
+				border: 1px solid #333333;
+				margin: 100px auto;
+				overflow: hidden;  /* 必须设置overflow： hidden */
+				touch-action: pan-y;  /* 在移动端必须设置该条，避免卡顿的情况 */
+			}
+			.scroll-content{
+				font-size: 30px;
+				height: 1000px;/* 子要比父高或者宽 */
+			}
+		</style>
+		<script>window.PointerEvent = undefined;</script>  <!-- 减少报错 -->
+	</head>
+	<body>
+		<div class="scroll">
+			<div class="scroll-content">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut minus ea voluptate atque fuga dolor laudantium dignissimos aut. Alias vitae accusantium a quisquam dolorem laborum error iure quibusdam quae modi vel voluptatum dicta corporis hic tempora labore ipsum eos ipsa cupiditate voluptas maxime sequi nobis quidem consectetur molestias autem quas ad? Eum debitis perferendis architecto ipsam delectus expedita molestiae unde reprehenderit asperiores vero cum ab voluptatum tenetur atque accusamus. Mollitia a provident quisquam esse quos assumenda beatae unde culpa labore fugit ex magni temporibus veritatis voluptates sunt nobis consequuntur facilis qui sit ab sequi quis libero eum non earum aliquam eaque veniam quia accusantium dolor! Neque libero sint iusto reprehenderit voluptas quam tempore blanditiis ullam provident repellendus ipsa consequuntur magnam delectus nisi veritatis culpa ex earum nemo nulla in facere officia minus perspiciatis expedita recusandae. Architecto aspernatur vel ipsum quas eius tenetur eos vitae labore fugiat hic tempora minus suscipit quis a inventore voluptas omnis facere ducimus esse dolorum illo repellat molestiae asperiores quasi quia pariatur libero consequuntur. Debitis minima obcaecati nam vitae natus mollitia architecto officiis maiores voluptas inventore non et consequatur? Cupiditate perferendis facere debitis sunt alias sed quibusdam quos dolore earum minima. Nemo error fuga fugiat illum voluptas nisi itaque explicabo maiores nulla doloremque omnis in delectus ex doloribus corporis at dolores nam quia excepturi ad debitis id dolorem amet earum voluptatem eos culpa iusto assumenda tempore sequi recusandae quam incidunt accusamus. Beatae harum ipsam sunt corporis deserunt nisi delectus perspiciatis quidem id tempora quod debitis temporibus ullam accusamus nihil at ducimus non impedit pariatur mollitia ratione doloremque natus et dolor amet ad recusandae expedita consectetur iusto qui! Explicabo possimus nam hic natus architecto dicta consequatur debitis dolorum repellat quidem nihil assumenda harum necessitatibus ut amet! Aliquid architecto neque itaque iste enim quod quas quasi totam fugit!
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est laborum doloremque odio reprehenderit eius hic molestiae tempore tenetur architecto ipsam numquam perferendis delectus illum assumenda unde sequi nesciunt reiciendis a? Et sequi provident consequatur nostrum voluptatum unde quam repellat dignissimos velit inventore autem soluta necessitatibus error distinctio libero animi mollitia. Nam ut tempora cum nesciunt ipsum in quis illo rerum sint fuga nisi quos eius consequatur non aperiam ab laudantium adipisci corporis possimus maxime tenetur sunt impedit asperiores distinctio et esse saepe reprehenderit molestias omnis eos corrupti ipsam quam odio necessitatibus autem iste velit? Minus iure esse sit ex tempora sunt exercitationem quaerat inventore nemo totam perferendis reprehenderit velit facere ad iusto maiores neque culpa alias quibusdam vero tempore odio deleniti excepturi dicta aperiam obcaecati saepe temporibus nisi quia distinctio blanditiis natus amet facilis ratione nihil autem non magni repudiandae assumenda porro molestias fugiat. Necessitatibus repudiandae accusantium repellendus voluptate soluta odio repellat illum provident rerum earum non quibusdam quo enim eveniet a. Alias dolore ut minus dicta ducimus ratione blanditiis totam obcaecati impedit doloribus beatae quae placeat modi libero deserunt quibusdam veniam nesciunt nemo asperiores porro laborum fugiat quo illo necessitatibus natus error veritatis saepe amet nostrum consequatur. Neque nesciunt.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure dolores facere eos earum expedita at quisquam! Hic obcaecati voluptatum fuga ab est fugit minima placeat dignissimos distinctio deserunt repellat sapiente enim ratione beatae qui dolor esse quis maxime doloribus quos accusamus aut perferendis sequi asperiores cumque eos repudiandae earum. Expedita ad amet sed consectetur ex nulla autem soluta vero maiores earum. Architecto sint sunt dolores atque nostrum repudiandae corporis incidunt nisi ipsum aspernatur ex in aut distinctio animi aperiam vero molestias nam tenetur eos odit repellendus maxime magni veritatis ea libero. Nam necessitatibus eius ipsum dolore deleniti fuga corporis mollitia!
+				<button>返回顶部</button>
+			</div>
+		</div>
+		
+		<script src="../assets/js/iscroll-probe.js"></script>  <!-- 引入插件 -->
+		<script>
+			var scroll = new IScroll(document.querySelector(".scroll"), {
+				scrollY = false,
+				scrollX = true,
+				deceleration: 0.003,  //滚动摩擦系数 默认 0.006
+				bounce: false,	//关闭边界回弹效果 默认true
+				momentum: false,	//关闭惯性滚动 默认true
+				click: true,	//取消滚动区域禁用点击事件的行为
+				probeType: 2,	//指定scroll时间触发的频率等级，等级越高触发的情况越多，越精细到小像素变化。除了势能和回弹
+				
+			}); //将包含滑动区域的盒子托管给该插件，第一个参数必须是js对象，第一个参数就是谁被托管
+			scroll.on("scroll", function() {
+				console.log(this.y);
+				console.log(this.maxScrollY);
+			});
+			document.querySelector("button").onclick = function() {
+				scroll.scrollTop(0,0,400);	
+			};
+		</script>
+	</body>
+</html>

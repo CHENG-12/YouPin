@@ -1,0 +1,595 @@
+.big-wrap{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	justify-content: space-between;
+	/* background-color: #eee; */
+	overflow: hidden;
+}
+/* 头部样式 */
+div.head{
+	height: 48px;
+	/* display: none; */
+	opacity: 0;
+	/* flex-shrink: 0; */
+	background-color: #eee;
+	justify-content: space-between;
+	align-items: stretch;
+	box-sizing: border-box;
+	border-bottom: 1px solid #999999;
+	transition: all 0.5s ease-out;
+}
+.head a i{
+	display: inline-block;
+	
+}
+.head.show{
+	opacity: 1;
+	display: flex;
+	z-index: 30;
+}
+.head a.back,
+.top-fix a.back{
+	width: 50px;
+	height: 50px;
+	display: flex;
+}
+.head a.back i,
+.top-fix a.back{
+	flex-grow: 1;
+	background-image: url(../../images/product/left_circle_gray.png);
+	background-position:center;
+	background-size: 38px;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.head a.more,
+.top-fix a.more{
+	width:31px;
+	display: flex;
+	align-items: center;
+	background-image: url(../../images/product/icon_more_solidgray3.png);
+	background-position:center;
+	background-size: 26px;
+	margin-right: 10px;
+	background-repeat: no-repeat;
+}
+.head a.more img,
+.top-fix a.more img{
+	width:100%;
+}
+.head .indic{
+	display: flex;
+}
+.head div.indic a{
+	font-family:system-ui, -apple-system, BlinkMacSystemFo;
+	font-size: 14px;
+	color: #000;
+	width: 49px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid transparent;
+}
+.head div.indic a.active{
+	box-sizing: border-box;
+	border-bottom: 1px solid #845f3f;
+	color: #845f3f;
+}
+/* 最上方的固定区域 */
+.top-fix{
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	height: 48px;
+	display: flex;
+	z-index: 2;
+	justify-content: space-between;
+}
+.top-fix a.back{
+	flex-grow: 0;
+	align-items: left;
+}
+	
+.top-fix a.more{
+	flex-shrink: 0;
+	align-items: right;
+}
+/* 内容区域 */
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	overflow: auto;
+	margin-top: -48px;
+}
+.content .swiper-container{
+	height: 375px;
+	flex-shrink: 0;
+	flex-grow: 1;
+	width: 100%;
+	
+}
+.content .swiper-wrapper{
+	width: 100%;
+}
+.swiper-wrapper>.swiper-slide {
+	width: 100%;
+}
+.swiper-wrapper>.swiper-slide>img {
+	width: 100%;
+}
+
+
+.content .slide-info{
+	box-sizing: border-box;
+	padding: 0px 12px;
+	background-color: #fff;
+	
+}
+.content .slide-info p.price{
+	font-size: 25px;
+	color: #B60909;
+	font-weight: bold;
+	height: 38px;
+	margin-top: 12px;
+}
+.content .slide-info p.name{
+	height: 38px;
+	margin-top: 12px;
+	font-size: 17px;
+	color: rgb(51,51,51);
+	font-weight: bold;
+}
+.content .slide-info p.brief,
+.content .slide-info p.ads{
+	height: 30px;
+	margin-top: 10px;
+	font-size: 13px;
+	color: #333;
+}
+.content .slide-info p.ads{
+	color: #BF1111;
+}
+.content .ads-img-one{
+	height: 30px;
+	margin-top: 15px;
+	text-align: center;
+	background-color: #fff;
+}
+.content .ads-img-one img{
+
+	height: 100%;
+}
+.content ul.choose{
+	height: 1000px;
+}
+.content ul.choose li{
+	height: 30px;
+	line-height: 30px;
+	margin-top: 5px;
+	color: #ccc;
+	display: flex;
+	padding: 0 10px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+}
+.content ul.choose li span{
+	font-size: 13px;
+	color: #333;
+	margin-left: 20px;
+}
+.content ul.choose li i{
+	
+	display: inline-block;
+	width: 12px;
+	height:  12px;
+	background-image: url(../../images/product/icon_arrow_right_darkgray.png);
+	background-position: 0 0;
+	background-size: 12px;
+}
+
+/* 固定加入购物车的区域 */
+.add-carWra{
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 100%;
+	left: 0px;
+	display: flex;
+	flex-direction: column;
+	/* background-color: rgba(0,0,0,.3); */
+	/* display: block;
+	display: none; */
+	/* transition: all 0.5s ease-out; */
+}
+.add-carWra.show{
+	top: 0;
+	transition: all 0.5s ease-out;
+	/* display: block; */
+}
+
+.add-car{
+	height: 75%;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	background-color: #fff;
+	transition: all 2s ease-out;
+}
+
+.add-car-top{
+	display: flex;
+	height: 100px;
+	margin: 10px;
+	
+}
+.add-car-top img{
+	height:100%;
+	background-color: #eee;
+}
+.add-car-top span.total{
+	align-self: center;
+}
+.count-num{
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border-top: 1px solid #333; */
+	
+}
+.count-num span:nth-child(1){
+	color: #999;
+	font-size: 13px;
+	margin-left: 10px;
+}
+.count-num .num-wra{
+	display: flex;
+	width: 300px;
+	justify-content: flex-end;
+}
+	
+.count-num .num-wra input{
+	font-size: 20px;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.count-num .num-wra span.count{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	width: 25px;
+	height: 30px;
+}
+
+.count-num .num-wra input.btn-increase{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+/* 用户评价区域 */
+div.rate{
+	margin-top:5px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+.rate h4{
+	color: #333;
+	font-size: 14px;
+}
+.rate ul.rate{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+.rate ul.rate li{
+	flex-basis: auto;
+	flex-grow: 1;
+	text-align: center;
+	background-color:  rgb(244, 231, 206);
+	line-height: 23px;
+	border-radius: 14px;
+	font-size: 11px;
+	margin-right: 2px;
+}
+/* 评价图片区域 */
+.scroll{
+	
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+	touch-action: pan-x;
+	
+}
+.scroll .scroll-content{
+	/* overflow: auto; */
+	display: flex;
+	margin-top: 10px;
+}
+.scroll .scroll-content div{
+	margin-right: 10px;
+}
+/* 下部详情大图片区域 */
+.pro-detail{
+	flex-shrink: 0;
+}
+.pro-detail .pro-head{
+	margin-top: 10px;
+	height: 40px;
+	background-color: #fff;
+}
+.pro-detail .pro-head.fix{
+	position: fixed;
+	width:100%;
+	top: 37px;
+	left: 0px;
+	display: none;
+}
+.pro-detail .pro-head.fix.show{
+	display: block;
+}
+.pro-detail ul{
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	
+}
+.pro-detail ul li{
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	justify-content: center;
+	font-size: 12px;
+	color: #666;
+}
+.pro-detail img{
+	width: 100%;
+	vertical-align: bottom;
+	/* display: block; */
+}
+.intro{
+	flex-shrink: 0;
+	height: 700px; 
+	
+}
+.introduce{
+	margin-top: 7px;
+}
+.introduce ul.nav{
+	display: flex;
+	justify-content: space-around;
+	height: 51px;
+}
+	
+.introduce ul.nav li{
+	color:#333;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.introduce ul.nav li.active{
+	color:#c30d23;
+	font-size: 20px;
+	font-weight: bold;
+	position:relative;
+}
+.introduce ul.nav li.active:before{
+	content:"";
+	width:25px;
+	border: 1px solid #BF1111;
+	position: absolute;
+	top: 40px;
+	left: 28px;
+	
+}
+.introduce ul.produc{
+	display: flex;
+	width:100%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.introduce ul.produc li{
+	box-sizing: border-box;
+	
+	/* width: 168px; */
+	/* margin-left: 3px; */
+	height: 267px;
+	display: flex;
+	margin-left: 2px;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-top: 7px;
+}
+.introduce ul.produc li img{
+	border-top-left-radius: 5px;
+	border-top-right: 5px;
+	
+	width: 165px;
+	background-color: #fff;
+}
+.introduce ul.produc li span.one{
+	color: #333;
+	font-size: 15px;
+	line-height: 21px;
+}
+.introduce ul.produc li span{
+	margin-top: 6px;
+}
+.introduce ul.produc li span.two{
+	color: #999;
+	font-size: 13px;
+	font-family: "microsoft yahei";
+}
+.introduce ul.produc li span.price{
+	font-size: 17px;
+	color: #E30D0D;
+	font-family: "microsoft yahei";
+}
+
+/* 页脚区
+/* 页脚区域 */
+.footer{
+	display: flex;
+	justify-content: space-between;
+	height: 55px;
+	/* flex-shrink: 0; */
+	background-color: #eee;
+}
+.footer div.icn{
+	width: 100px;
+	display: flex;
+	align-items: center;
+	
+}
+.footer .icn i{
+	color: rgb(122, 122, 122);
+	font-style: normal;
+	font-family:system-ui, -apple-system, BlinkMacSystemFo;
+	font-size: 10px;
+	flex-grow: 1;
+	display: flex;
+	box-sizing: border-box;
+	padding-top : 30px;
+	justify-content: center;
+	align-items: center;
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center 0;
+}
+.footer .icn i:nth-child(1){
+	background-image: url(../../images/product/mi_shop_icon.png);
+}
+.footer .icn>a i:nth-child(1){
+	background-image: url(../../images/product/icon_cart_darkgray.png);
+}
+/* 数量小圆圈的定位 */
+.footer .icn>a{
+	position: relative;
+	display: flex;
+	align-items: center
+}
+	
+.footer .icn a span.count{
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	position: absolute;
+	top: -2px;
+	left: 20px;
+	color: #fff;
+	text-align: center;
+	display: none;
+	background-color:  rgb(227, 13, 13);
+}
+.footer .icn a span.count.show{
+	display: block;
+}
+
+.footer .buy{
+	width: 253px;
+	display: flex;
+	align-self: center;
+	box-sizing: border-box;
+	padding-right: 10px;
+	flex-basis: auto;
+}
+.footer .buy span{
+	width: 50%;
+	line-height: 38px;
+	text-align: center;
+	font-size: 15px;
+	font-style: bold;
+}
+.footer .buy span a{
+	color: #fff;
+}
+.footer .buy span:nth-child(1){
+	background: linear-gradient(to right, rgb(240, 206, 123), rgb(221, 177, 81));
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.footer .buy span:nth-child(2){
+	background: linear-gradient(to right, rgb(240, 78, 46), rgb(213, 16, 16));
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	
+}
+
+/* 蒙层的效果 */
+.add-carWra .buy{
+	width: 253px;
+	margin: 0 auto;
+	display: flex;
+	align-self: center;
+	margin-top: 288px;
+	box-sizing: border-box;
+	padding-right: 10px;
+	flex-basis: auto;
+	
+}
+.add-carWra .buy span{
+	width: 50%;
+	line-height: 38px;
+	text-align: center;
+	font-size: 15px;
+	font-style: bold;
+}
+.add-carWra .buy span a{
+	color: #fff;
+}
+.add-carWra .buy span:nth-child(1){
+	background: linear-gradient(to right, rgb(240, 206, 123), rgb(221, 177, 81));
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.add-carWra .buy span:nth-child(2){
+	background: linear-gradient(to right, rgb(240, 78, 46), rgb(213, 16, 16));
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	
+}
+.add-carWra .close{
+	background-color: #eee;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 26%;
+	left: 92%;
+	background-image: url(../../images/product/icon_close.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 12px;
+}
+/* 返回顶部的样式 */
+.back-top{
+	width: 36px;
+	height: 36px;
+	border-radius:50%;
+	background-image:url(../../images/back-top.png);
+	background-position: center;
+	background-size:100%;
+	position: fixed;
+	top: 75%;
+	right: 5%;
+}
